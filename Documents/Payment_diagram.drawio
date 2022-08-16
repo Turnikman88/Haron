@@ -1,1 +1,55 @@
-<mxfile host="app.diagrams.net" modified="2022-08-10T17:06:32.583Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 OPR/89.0.4447.83" etag="Zs_FE6yprkyF2jCL2MEj" version="20.2.3" type="device"><diagram id="snXgQ7zDpd6ALeMQA5ko" name="Page-1">7Zltb9owEMc/DS+ZSAIUXi4pdGth6qBrp72pTGKIhZOLHPP46XdOHB5qWB9WyqRFolX8z9k53+/smKPieNHySpAk7ENAecWuBcuKc1mx7Uazhf+VsMoFq+Y0c2UiWKC1rTBka1oYanXGApruGUoALlmyL/oQx9SXexoRAhb7ZmPg+09NyIQawtAn3FQfWCDDXG3ZF1v9C2WTsHiy1WzndyJSGOuZpCEJYLEjOZ2K4wkAmV9FS49yFbwiLnm/7pG7G8cEjeVLOvwc29fyIRkReLzvxb2oQddJ1c5HmRM+0xN2iT+t0jjQTstVEYl0wSJOYmy5Y4jlUN+pYdsPGQ96ZAUz5UkqcYii5YYg2BrtCcdbFgp4W0gN2qntWQxVTz2moCna3BbTs55IfbLcM+yRVBbeAOckSdko8091jIiYsNgFKSHSRmb0dEDnVEi63JF0NK8oRFSKFZoUya3BblJbtxfbPLHqWgt3csS+0CLRuTnZDL3Fhxea4CtoOgbNT9+oRKWKf1ymBlOcqcyQCJhSDzgI1GPIITPOn0iEs0mMTU7HqpsKFcOl8lnLEQsCNbKbJsRn8aSXmV3Wt8pAR0FJgN3HPFsRIXakOIKbAItlFpWGix+Mk1f71Kg00FcP29a2jR9lLqQHMbpPWIaRYhYsqMoEV4Akkow2OWoC/+OCeD4LNHbnhdSdU0GvG9D7zBeQUjFnPi2Rvz/y5rmRNwzklxBhPNSLVrA5zS5wW5zEJf8T8G+fm79lGQnQ6WLbA0HV89Tbu9YZ3pbw3x++ZZ+dvnlo+4rhlEwqN4e471Oh3/mwwK0AD9yOpUKyYOiwXbt+uKuoSbjZsRmmrNwkTpEnjbPniXkyuKMxwWnaXRchYtxViiSSYajKFDhBCrTOngJtIwUGZMRk/7sir3aJGzKfkhL++8PfVDDOBr94Ue2eEjgGgvkKNiXCD0vwJwBf/0Dw644MwtbjoPtr2Gw2f0CL346r5umwKyCW/01Vx2B1oNBztKqz+Xb32rJO+1Q4zePegBK1dvMd/H5Wnt+eQ358mfwTdZ3D7pnc9ws7tfHRVV3y/2v+H1nkOezegcIejBjPvuEnSbmTP7eT1y/euJM3T4bULNzdgOSqcFcu4Dcs4Pq5dvCKOlEVP9xl93Z+/nQ6vwE=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-08-16T17:36:43.700Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="p0Qml3Xk1Rdg6ALinRJu" version="20.2.4" type="github">
+  <diagram id="snXgQ7zDpd6ALeMQA5ko" name="Page-1">
+    <mxGraphModel dx="1038" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-2" value="Back-end" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="50" y="100" width="140" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-3" value=".Net - lts" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-4" value="Microservice" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-5" value="Domain driven designe" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="90" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-11" value="EF Core and ESP" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-12" value="Identity Server - own&#xa;with JWT + cookie" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-14" value="Tenant/Billing options" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="180" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-19" value="RabitMQ or Kavka" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="210" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Xf2JtWpbao_VLnLm5ezp-20" value="Elastic search" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="Xf2JtWpbao_VLnLm5ezp-2" vertex="1">
+          <mxGeometry y="240" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="blLHWndiZsECNPH8XYXt-1" value="Chat" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Xf2JtWpbao_VLnLm5ezp-2">
+          <mxGeometry y="270" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zEtdh8_RFZS666Uo8lPf-1" value="Front-end" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="260" y="100" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="zEtdh8_RFZS666Uo8lPf-2" value="Reach or Vue" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="zEtdh8_RFZS666Uo8lPf-1" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zEtdh8_RFZS666Uo8lPf-12" value="Microservice front-end" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="zEtdh8_RFZS666Uo8lPf-1" vertex="1">
+          <mxGeometry y="60" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zEtdh8_RFZS666Uo8lPf-14" value="Mobile app" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+          <mxGeometry x="470" y="100" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zEtdh8_RFZS666Uo8lPf-15" value="Kotlin" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="zEtdh8_RFZS666Uo8lPf-14" vertex="1">
+          <mxGeometry y="30" width="140" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
