@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
     <Folder Include="Attributes\" />
     <Folder Include="Constants\" />
     <Folder Include="Enumerators\" />

@@ -21,17 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haron.Application.Core", "H
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Haron.04.Presentation", "Haron.04.Presentation", "{F082121A-675D-4168-907C-9952CA7C8FD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haron.Infrastructure.Data", "Haron.Infrastructure.Data\Haron.Infrastructure.Data.csproj", "{C0F98907-96BF-4FAD-AACD-144D114494E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haron.Infrastructure.Data.Identity", "Haron.Infrastructure.Data\Haron.Infrastructure.Data.Identity.csproj", "{C0F98907-96BF-4FAD-AACD-144D114494E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haron.Infrastructure.Bus", "Haron.Infrastructure.Bus\Haron.Infrastructure.Bus.csproj", "{C8E08F58-B1F7-4D55-A769-A759FDCBAD53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haron.Infrastructure.Bus", "Haron.Infrastructure.Bus\Haron.Infrastructure.Bus.csproj", "{C8E08F58-B1F7-4D55-A769-A759FDCBAD53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependency", "Dependency", "{A052117C-9C3B-4972-B409-18030061B67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haron.Infrastructure.Dependency", "Haron.Infrastructure.Dependency\Haron.Infrastructure.Dependency.csproj", "{90B9DE93-18E3-4EB6-BB2D-D83C4CE20F3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haron.Infrastructure.Dependency", "Haron.Infrastructure.Dependency\Haron.Infrastructure.Dependency.csproj", "{90B9DE93-18E3-4EB6-BB2D-D83C4CE20F3D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Haron.GatewayApi", "Haron.GatewayApi", "{72B300EA-67FB-47ED-B02F-C9651B1E2640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haron.GatewayApi", "Haron.GatewayApi\Haron.GatewayApi.csproj", "{7BD23615-7AF3-4F01-928B-A498DD619F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haron.GatewayApi", "Haron.GatewayApi\Haron.GatewayApi.csproj", "{7BD23615-7AF3-4F01-928B-A498DD619F5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
