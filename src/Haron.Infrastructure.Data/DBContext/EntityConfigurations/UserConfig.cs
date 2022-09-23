@@ -10,9 +10,9 @@ namespace Haron.Infrastructure.Data.Identity.DBContext.EntityConfigurations
         {
             builder.HasKey(x => x.Id);
 
-            builder.HasIndex(x => x.NormalizedEmail).IsUnique();
+            builder.HasIndex(x => x.NormalizedEmail);
 
-            builder.HasIndex(x => x.NormalizedUsername).IsUnique();
+            builder.HasIndex(x => x.NormalizedUsername);
 
             builder.Property(x => x.Email).HasMaxLength(254).IsRequired();
 
