@@ -2,7 +2,7 @@
 
 namespace Haron.Application.Core.Identity.Options
 {
-    internal class UserOption
+    public class UserOption
     {
         private readonly StringBuilder _allowedUserNameCharacters;
 

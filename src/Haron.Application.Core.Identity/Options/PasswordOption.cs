@@ -1,6 +1,6 @@
 ﻿namespace Haron.Application.Core.Identity.Options
 {
-    internal class PasswordOption
+    public class PasswordOption
     {
         private readonly string _specialSymbols = string.Empty;
 
