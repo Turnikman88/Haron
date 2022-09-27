@@ -46,6 +46,9 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Name", "AccessLevel")
+                        .IsUnique();
+
                     b.ToTable("Permissions");
                 });
 
@@ -64,14 +67,14 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("Name")
-                        .IsUnique()
-                        .HasFilter("[Name] IS NOT NULL");
+                        .IsUnique();
 
                     b.ToTable("Roles");
                 });
@@ -100,7 +103,8 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.HasIndex("PermissionId");
 
-                    b.HasIndex("RoleId");
+                    b.HasIndex("RoleId", "PermissionId")
+                        .IsUnique();
 
                     b.ToTable("RolePermissions");
                 });
@@ -124,8 +128,8 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(254)
+                        .HasColumnType("nvarchar(254)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -148,8 +152,8 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.Property<string>("NormalizedEmail")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(254)
+                        .HasColumnType("nvarchar(254)");
 
                     b.Property<string>("NormalizedUsername")
                         .IsRequired()
@@ -157,6 +161,7 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("PasswordHash")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
@@ -175,11 +180,9 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NormalizedEmail")
-                        .IsUnique();
+                    b.HasIndex("NormalizedEmail");
 
-                    b.HasIndex("NormalizedUsername")
-                        .IsUnique();
+                    b.HasIndex("NormalizedUsername");
 
                     b.ToTable("Users");
                 });
@@ -208,7 +211,8 @@ namespace Haron.Infrastructure.Data.Identity.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "RoleId")
+                        .IsUnique();
 
                     b.ToTable("UserRoles");
                 });
