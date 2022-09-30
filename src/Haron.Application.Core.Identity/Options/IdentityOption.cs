@@ -2,10 +2,17 @@
 {
     public class IdentityOption
     {
-        public UserOption? User { get; set; }
+        public IdentityOption()
+        {
+            UserRequrments = new UserOption();
+            SignInRequrments = new SignInOption();
+            PasswordRequrments = new PasswordOption();
+        }
 
-        public SignInOption? SignIn { get; set; }
+        public UserOption? UserRequrments { get; set; }
 
-        public PasswordOption? Password { get; set; }
+        public SignInOption? SignInRequrments { get; set; }
+
+        public PasswordOption? PasswordRequrments { get; set; }
     }
 }

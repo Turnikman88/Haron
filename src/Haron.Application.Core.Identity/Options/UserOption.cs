@@ -12,6 +12,7 @@ namespace Haron.Application.Core.Identity.Options
         }
 
         public bool RequireUniqueEmail { get; set; }
+
         public string? AllowedUserNameCharacters
         {
             get

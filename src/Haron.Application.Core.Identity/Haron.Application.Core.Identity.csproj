@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Haron.Domain.Core\Haron.Domain.Core.csproj" />
+    <ProjectReference Include="..\Haron.Infrastructure.Data\Haron.Infrastructure.Data.Identity.csproj" />
+  </ItemGroup>
+
 </Project>

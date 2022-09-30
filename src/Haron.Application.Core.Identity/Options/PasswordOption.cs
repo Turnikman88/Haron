@@ -3,10 +3,11 @@
     public class PasswordOption
     {
         private readonly string _specialSymbols = string.Empty;
+        private int _minimalLength;
 
         public PasswordOption()
         {
-            MinimalLength = 6;
+            _minimalLength = 6;
             _specialSymbols = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
         }
 
@@ -14,7 +15,17 @@
         public bool RequiredUppercase { get; set; }
         public bool RequiredLowercase { get; set; }
         public bool RequiredSpecialSymbols { get; set; }
-        public int MinimalLength { get; set; }
+        public int MinimalLength
+        {
+            get
+            {
+                return _minimalLength;
+            }
+            set
+            {
+                _minimalLength = value;
+            }
+        }
 
         public bool CheckForSpecialSymbols(string pass)
         {
