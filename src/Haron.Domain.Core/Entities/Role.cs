@@ -2,7 +2,7 @@
 
 namespace Haron.Domain.Core.Entities
 {
-    public class Role : BaseModel<int>
+    public class Role : BaseDeletableModel<int>
     {
         public Role()
         {

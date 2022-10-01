@@ -2,7 +2,7 @@
 
 namespace Haron.Domain.Core.Entities
 {
-    public class Permission : BaseModel<int>
+    public class Permission : BaseDeletableModel<int>
     {
         public Permission()
         {
