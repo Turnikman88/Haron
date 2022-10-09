@@ -11,6 +11,7 @@
             _specialSymbols = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
         }
 
+        public string Salt { get; set; }
         public bool RequiredDigit { get; set; }
         public bool RequiredUppercase { get; set; }
         public bool RequiredLowercase { get; set; }
