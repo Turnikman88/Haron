@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Haron.Application.Core.Identity.Options;
+﻿using Haron.Application.Core.Identity.Options;
 using Haron.Application.Core.Identity.Users.Models;
 using Haron.Application.Core.Identity.ValidationModels;
 using Haron.Domain.Core.Entities;
@@ -13,15 +12,13 @@ namespace Haron.Application.Core.Identity.Services
         private readonly SignInManager _signInManager;
         private readonly UserManager _userManager;
         private readonly IUserRepository _userRepository;
-        private readonly IMapper _autoMapper;
 
-        public UserManagerService(IdentityOption identityOption, IUserRepository userRepository, IMapper autoMapper)
+        public UserManagerService(IdentityOption identityOption, IUserRepository userRepository)
         {
             _passwordManager = new PasswordManager(identityOption.PasswordRequrments);
             _signInManager = new SignInManager(identityOption.SignInRequrments);
             _userManager = new UserManager(identityOption.UserRequrments, userRepository);
             _userRepository = userRepository;
-            _autoMapper = autoMapper;
         }
 
         public async Task<ValidationModel> RegisterUser(UserRegisterModel inputModel)
@@ -32,7 +29,7 @@ namespace Haron.Application.Core.Identity.Services
                 result.Message = "Mission input information";
                 return result;
             }
-            var user = _autoMapper.Map<User>(inputModel);
+            var user = CreateUserRegisterModel(inputModel);
 
             var isUsernameValid = _userManager.ValidationUsername(user);
             if (!isUsernameValid.Succeeded)
@@ -52,8 +49,23 @@ namespace Haron.Application.Core.Identity.Services
                 return isSuchUserExist;
             }
 
+            user.PasswordHash = _passwordManager.HashPassoword(inputModel.Password);
+            await _userRepository.AddAsync(user);
+            await _userRepository.SaveChangesAsync();
 
             return result;
+        }
+
+        private User CreateUserRegisterModel(UserRegisterModel inputModel)
+        {
+            return new User
+            {
+                FirstName = inputModel.FirstName,
+                LastName = inputModel.LastName,
+                Email = inputModel.Email,
+                Username = inputModel.Username,
+                PhoneNumber = inputModel.PhoneNumber
+            };
         }
     }
 }
