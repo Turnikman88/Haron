@@ -4,11 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Haron.Infrastructure.Data.Identity.DBContext.EntityConfigurations
 {
-    internal class UserRoleConfig : IEntityTypeConfiguration<UserRole>
+    public class UserRoleConfig : IEntityTypeConfiguration<UserRole>
     {
         public void Configure(EntityTypeBuilder<UserRole> builder)
         {
+            builder.ToTable("UserRoles");
+
             builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.CreatedOn).IsRequired();
 
             builder.HasIndex(x => new { x.UserId, x.RoleId }).IsUnique();
 

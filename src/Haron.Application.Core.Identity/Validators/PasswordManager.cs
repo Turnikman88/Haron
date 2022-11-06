@@ -1,11 +1,12 @@
 ﻿using Haron.Application.Core.Identity.Options;
 using Haron.Application.Core.Identity.ValidationModels;
+using Haron.Application.Core.Identity.Validators.Contracts;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Haron.Application.Core.Identity.Services
+namespace Haron.Application.Core.Identity.Validators
 {
-    public class PasswordManager
+    public class PasswordManager : IPasswordManager
     {
         private readonly ICollection<Func<string, bool>> _requirments;
         private readonly string _salt;
@@ -42,7 +43,6 @@ namespace Haron.Application.Core.Identity.Services
                 return hash;
             }
         }
-
         private string GetHash(HashAlgorithm hashAlgorithm, string input)
         {
             byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input + _salt));

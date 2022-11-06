@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Haron.Infrastructure.Data.Identity.DBContext.EntityConfigurations
 {
-    public class RoleConfig : IEntityTypeConfiguration<Role>
+    public class RoleClaimConfig : IEntityTypeConfiguration<RoleClaim>
     {
-        public void Configure(EntityTypeBuilder<Role> builder)
+        public void Configure(EntityTypeBuilder<RoleClaim> builder)
         {
-            builder.ToTable("Roles");
+            builder.ToTable("RoleClaims");
 
             builder.Property(x => x.CreatedOn).IsRequired();
         }

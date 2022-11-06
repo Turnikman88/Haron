@@ -1,21 +1,24 @@
 ﻿using Haron.Domain.Core.Entities.Abstract;
+using Microsoft.EntityFrameworkCore;
 
 namespace Haron.Domain.Core.Interfaces.Identity.Abstract
 {
     public interface IIdentityRepository { }
-    public interface IIdentityRepository<T> : IIdentityRepository where T : BaseDeletableModel<int>
+    public interface IIdentityRepository<TObj, TContext> : IIdentityRepository
+        where TObj : BaseDeletableModel<int>
+        where TContext : DbContext
     {
-        Task<T> GetAsync(int id);
+        Task<TObj> GetAsync(int id);
 
-        IQueryable<T> GetAll();
+        IQueryable<TObj> GetAll();
 
-        Task<T> AddAsync(T entity);
+        Task<TObj> AddAsync(TObj entity);
 
-        Task AddRange(IEnumerable<T> entities);
+        Task AddRange(IEnumerable<TObj> entities);
 
-        void Update(T entity);
+        void Update(TObj entity);
 
-        void UpdateRange(IEnumerable<T> entities);
+        void UpdateRange(IEnumerable<TObj> entities);
 
         Task<int> DeleteAsync(int entityId);
 

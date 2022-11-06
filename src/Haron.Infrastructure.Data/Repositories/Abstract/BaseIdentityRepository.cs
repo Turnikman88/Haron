@@ -5,7 +5,7 @@ using Haron.Infrastructure.Data.Identity.DBContext;
 namespace Haron.Infrastructure.Data.Identity.Repositories.Abstract
 {
     public abstract class BaseIdentityRepository : IIdentityRepository { }
-    public abstract class BaseIdentityRepository<T> : BaseIdentityRepository, IIdentityRepository<T> where T : BaseDeletableModel<int>
+    public abstract class BaseIdentityRepository<TObj> : BaseIdentityRepository, IIdentityRepository<TObj> where TObj : BaseDeletableModel<int>
     {
         protected readonly IdentityContext _context;
 
@@ -14,13 +14,13 @@ namespace Haron.Infrastructure.Data.Identity.Repositories.Abstract
             _context = context;
         }
 
-        public async Task<T> AddAsync(T entity)
+        public async Task<TObj> AddAsync(TObj entity)
         {
-            await _context.AddAsync<T>(entity);
+            await _context.AddAsync<TObj>(entity);
             return entity;
         }
 
-        public async Task AddRange(IEnumerable<T> entities)
+        public async Task AddRange(IEnumerable<TObj> entities)
         {
             await _context.AddRangeAsync(entities);
         }
@@ -35,14 +35,14 @@ namespace Haron.Infrastructure.Data.Identity.Repositories.Abstract
             throw new NotImplementedException();
         }
 
-        public IQueryable<T> GetAll()
+        public IQueryable<TObj> GetAll()
         {
-            return _context.Set<T>();
+            return _context.Set<TObj>();
         }
 
-        public async Task<T> GetAsync(int id)
+        public async Task<TObj> GetAsync(int id)
         {
-            var result = await _context.FindAsync<T>(id);
+            var result = await _context.FindAsync<TObj>(id);
             return result;
         }
 
@@ -51,12 +51,12 @@ namespace Haron.Infrastructure.Data.Identity.Repositories.Abstract
             return await _context.SaveChangesAsync();
         }
 
-        public void Update(T entity)
+        public void Update(TObj entity)
         {
-            _context.Update<T>(entity);
+            _context.Update<TObj>(entity);
         }
 
-        public void UpdateRange(IEnumerable<T> entities)
+        public void UpdateRange(IEnumerable<TObj> entities)
         {
             _context.UpdateRange(entities);
         }

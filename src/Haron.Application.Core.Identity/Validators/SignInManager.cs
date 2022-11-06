@@ -1,9 +1,10 @@
 ﻿using Haron.Application.Core.Identity.Options;
+using Haron.Application.Core.Identity.Validators.Contracts;
 using Haron.Domain.Core.Entities;
 
-namespace Haron.Application.Core.Identity.Services
+namespace Haron.Application.Core.Identity.Validators
 {
-    public class SignInManager
+    public class SignInManager : ISignInManager
     {
         private readonly ICollection<Func<User, bool>> _registerRequirments;
         private readonly ICollection<Func<User, bool>> _signInRequirments;

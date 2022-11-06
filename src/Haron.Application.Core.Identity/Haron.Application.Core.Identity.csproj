@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Haron.Infrastructure.Data\Haron.Infrastructure.Data.Identity.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
